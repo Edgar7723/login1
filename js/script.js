@@ -5,6 +5,8 @@ function entrar() {
     let mensaje = document.getElementById('mensajeFeedback');
 
     if (usuario == "admin" && password == "12345") {
+        localStorage.setItem("usuario", usuario);
+        window.location.href = "pages/principal.html";
         mensaje.innerHTML = "¡Bienvenido " + usuario + "!";
         mensaje.style.color = "green";
         mensaje.style.backgroundColor = "#eaffea";
@@ -18,4 +20,24 @@ function entrar() {
         mensaje.style.padding = "5px";
     }
 }
-document.getElementById('btnIngresar').onclick = entrar;
+
+const btnIngresar = document.getElementById('btnIngresar');
+if (btnIngresar) {
+    btnIngresar.onclick = entrar;
+}
+
+function cerrarSesion() {
+    localStorage.removeItem("usuario");
+    window.location.href = "../index.html";
+}
+
+if (
+    !localStorage.getItem("usuario") &&
+    window.location.pathname.includes("principal.html")
+) {
+    window.location.href = "../index.html";
+}
+const btnCerrar = document.getElementById("btnCerrarSesion");
+if (btnCerrar) {
+    btnCerrar.onclick = cerrarSesion;
+}
