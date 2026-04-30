@@ -87,7 +87,22 @@ label {
     cursor: pointer;
     transition: background 0.2s;
 }
+#btnCerrarSesion {
+    width: 320px;
+    padding: 10px;
+    background-color: #64cbc9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
 
+#btnCerrarSesion:hover {
+    background-color: #5bb8b6;
+}
 #btnIngresar:hover {
     background-color: #64cbc9;
 }
