@@ -46,8 +46,10 @@ document.getElementById('btnRegistrar').addEventListener('click', async () => {
     if (error) {
         console.log(error);
 
-        alert('Ocurrió un error al registrar al usuario');
+        alert('Error al registrar al usuario');
+        
     } else {
         alert('Usuario registrado correctamente');
+        window.location.href = '../index.html';
     }
 });
