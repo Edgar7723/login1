@@ -2,44 +2,140 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Contenedor del login */
-#formularioInicio {
+/* Contenedor principal */
+#formularioInicio,
+#formularioRegistro {
     background-color: #ffffff;
     width: 320px;
     padding: 30px;
     border-radius: 10px;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
     text-align: left;
 }
 
-/* Títulos */
+/* Logo */
+#logo {
+    width: 100px;
+    display: flex;
+    margin: auto;
+}
+
+/* Titulos */
 h1 {
     color: #222;
     font-size: 20px;
     margin-top: 10px;
     text-align: center;
 }
-#logo{
-    width: 100px;
-    display: flex;
-    margin: auto;
-
-}
 
 h2 {
     font-size: 16px;
     color: #444;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
-    
+}
+
+/* Labels */
+label {
+    font-size: 13px;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Inputs */
+.entradaTexto {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 15px 0;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background-color: #fafafa;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        background-color 0.2s,
+        transform 0.2s;
+
+    box-sizing: border-box;
+}
+
+.entradaTexto:focus {
+    border-color: #64cbc9;
+    background-color: #fff;
+    transform: scale(1.02);
+}
+
+/* Botones */
+#btnIngresar,
+#btnRegistrar,
+#btnCerrarSesion {
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: #64cbc9;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+/* Hover botones */
+#btnIngresar:hover,
+#btnRegistrar:hover,
+#btnCerrarSesion:hover {
+    background-color: #5bb8b6;
+    transform: scale(1.02);
+}
+
+/* Boton cerrar sesion */
+#btnCerrarSesion {
+    margin-top: 20px;
+    width: 320px;
+    border-radius: 10px;
+}
+
+/* Feedback login */
+#mensajeFeedback {
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+/* Contenedor inputs registro */
+#contenedorInputs {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Lista */
@@ -50,59 +146,13 @@ ol {
     text-align: left;
 }
 
-/* Labels */
-label {
+/* Links */
+a {
+    color: #64cbc9;
+    text-decoration: none;
     font-size: 13px;
-    color: #555;
 }
 
-/* Inputs */
-.entradaTexto {
-    width: 100%;
-    padding: 10px;
-    margin: 6px 0 15px 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #fafafa;
-    outline: none;
-    transition: border 0.2s;
-    transform: 0.3;
-}
-
-.entradaTexto:focus {
-    border-color: #666;
-    background-color: #fff;
-    transform: scale(1.025);
-}
-
-/* Botón */
-#btnIngresar {
-    width: 100%;
-    padding: 10px;
-    background-color: #64cbc9;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-#btnCerrarSesion {
-    width: 320px;
-    padding: 10px;
-    background-color: #64cbc9;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 20px;
-}
-
-#btnCerrarSesion:hover {
-    background-color: #5bb8b6;
-}
-#btnIngresar:hover {
-    background-color: #64cbc9;
+a:hover {
+    text-decoration: underline;
 }
