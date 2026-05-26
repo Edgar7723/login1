@@ -39,17 +39,21 @@ document.getElementById('btnRegistrar').addEventListener('click', async () => {
                 correo,
                 password,
                 edad,
-                id_rol: 2
+                id_rol: document.getElementById('id_rol').value
             }
         ]);
 
     if (error) {
+
         console.log(error);
 
-        alert('Error al registrar al usuario');
-        
+        alert(error.message);
+        window.location.href = "../index.html";
+
     } else {
+
         alert('Usuario registrado correctamente');
-        window.location.href = '../index.html';
+        window.location.href = "../index.html";
+
     }
 });
